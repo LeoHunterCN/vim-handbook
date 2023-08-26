@@ -1,0 +1,169 @@
+{
+  "vim.easymotion": true,
+  "vim.leader": "<Space>",
+  "vim.sneak": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["<Leader>", "d", "f"],
+      "after": ["V", "$", "%", "d"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f"],
+      "after": ["s"]
+    },
+    {
+      "before": ["F"],
+      "after": ["S"]
+    },
+    {
+      "before": ["s"],
+      "after": ["c", "l"]
+    },
+    {
+      "before": ["S"],
+      "after": ["^", "C"]
+    },
+    // format document
+    {
+      "before": ["<Leader>", "f", "d"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // rename
+    {
+      "before": ["<Leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    // fold
+    {
+      "before": ["<Leader>", "["],
+      "commands": [
+        {
+          "command": "editor.fold"
+        },
+        {
+          "command": "vim.remap",
+          "args": {
+            "after": ["$", "%"]
+          }
+        }
+      ]
+    },
+    // new file
+    {
+      "before": ["<Leader>", "n", "f"],
+      "commands": ["explorer.newFile"]
+    },
+    // new folder
+    {
+      "before": ["<Leader>", "n", "d"],
+      "commands": ["explorer.newFolder"]
+    },
+    // rename
+    {
+      "before": ["<Leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<Leader>", "c", "l"],
+      "commands": ["git.clean"]
+    },
+    {
+      "before": ["<Leader>", "g", "d", "f"],
+      "commands": ["git.openChange"]
+    },
+    {
+      "before": ["<Leader>", "g", "c"],
+      "commands": ["git.commit"]
+    },
+    {
+      "before": ["<Leader>", "g", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<Leader>", "g", "s"],
+      "commands": ["git.stage"]
+    },
+    {
+      "before": ["<Leader>", "g", "u"],
+      "commands": ["git.unstage"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["a", "i"],
+      "after": ["a", "I"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f"],
+      "after": ["z"]
+    },
+    {
+      "before": ["F"],
+      "after": ["Z"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["H"],
+      "after": ["^"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    {
+      "before": ["a", "i"],
+      "after": ["a", "I"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["f"],
+      "after": ["s"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.argumentObjectOpeningDelimiters": ["(", "[", "{"],
+  "vim.argumentObjectClosingDelimiters": [")", "]", "}"],
+}
