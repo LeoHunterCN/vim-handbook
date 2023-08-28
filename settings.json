@@ -1,7 +1,8 @@
 {
   "vim.easymotion": true,
-  "vim.leader": "<Space>",
   "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<Space>",
   "vim.normalModeKeyBindings": [
     {
       "before": ["H"],
@@ -41,6 +42,104 @@
       "before": ["S"],
       "after": ["^", "C"]
     },
+    {
+			// 向右侧跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"l"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"l",
+			]
+		},
+		{
+			// 向左侧跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"h"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"h",
+			]
+		},
+		{
+			// 基于行的向上跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"k"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"k",
+			]
+		},
+		{
+			// 基于行的向下跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"j"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"j",
+			]
+		},
+		{
+			// 基于单词的跳转 单词首 全局向下 基于 easymotion
+			"before": [
+				"<Leader>",
+				"w"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"w",
+			]
+		},
+		{
+			// 基于单词的跳转 单词尾 全局向下 基于 easymotion
+			"before": [
+				"<Leader>",
+				"e"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"e",
+			]
+		},
+		{
+			// 基于单词的跳转 单词首 全局向上 基于 easymotion
+			"before": [
+				"<Leader>",
+				"b"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"b",
+			]
+		},
+		{
+			// 基于单词的跳转 单词尾 全局向上 基于 easymotion
+			"before": [
+				"<Leader>",
+				"g",
+				"e"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"g",
+				"e",
+			]
+		},
     // format document
     {
       "before": ["<Leader>", "f", "d"],
@@ -156,7 +255,105 @@
     {
       "before": ["f"],
       "after": ["s"]
-    }
+    },
+    {
+			// 向右侧跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"l"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"l",
+			]
+		},
+		{
+			// 向左侧跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"h"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"h",
+			]
+		},
+		{
+			// 基于行的向上跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"k"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"k",
+			]
+		},
+		{
+			// 基于行的向下跳转 利用的 easymotion
+			"before": [
+				"<Leader>",
+				"j"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"j",
+			]
+		},
+		{
+			// 基于单词的跳转 单词首 全局向下 基于 easymotion
+			"before": [
+				"<Leader>",
+				"w"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"w",
+			]
+		},
+		{
+			// 基于单词的跳转 单词尾 全局向下 基于 easymotion
+			"before": [
+				"<Leader>",
+				"e"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"e",
+			]
+		},
+		{
+			// 基于单词的跳转 单词首 全局向上 基于 easymotion
+			"before": [
+				"<Leader>",
+				"b"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"b",
+			]
+		},
+		{
+			// 基于单词的跳转 单词尾 全局向上 基于 easymotion
+			"before": [
+				"<Leader>",
+				"g",
+				"e"
+			],
+			"after": [
+				"<leader>",
+				"<leader>",
+				"g",
+				"e",
+			]
+		},
   ],
   "vim.insertModeKeyBindings": [
     {

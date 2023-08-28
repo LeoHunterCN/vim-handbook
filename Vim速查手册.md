@@ -22,7 +22,9 @@ VSCodeVim
 > 3. 注意区分大小写
 
 ### Vim 语法
-操作(operation) + 动词(scope)
+操作(operation) + 动作(scope)
+数字 + 操作(operation) + 动作(scope)
+操作(operation) + 数字 + 动作(scope)
 #### 操作
 
 删除: `d`
@@ -30,6 +32,8 @@ VSCodeVim
 删除并进入 insert 模式: `c`
 
 复制: `y`
+
+重复上一次的修改: `.`
 
 #### 动词
 配合光标移动去确定接受操作的范围
@@ -101,6 +105,26 @@ VSCodeVim
 跳到文件尾: `G`
 
 跳到指定行: `<number>gg`, `<number>G`(<number>指行数)  
+
+### 使用 vim-easymotion
+
+往下移动到单词的开头: `<leader><leader>w`
+
+往下移动到单词的结尾: `<leader><leader>e`
+
+往上移动到单词的开头: `<leader><leader>b`
+
+往上移动到单词的结尾: `<leader><leader>ge`
+
+往下移动到行首: `<leader><leader>j`
+
+往上移动到行首: `<leader><leader>k`
+
+Matches beginning & ending of word, camelCase, after _, and after # forwards: `<leader><leader>l`
+
+Matches beginning & ending of word, camelCase, after _, and after # backwards: `<leader><leader>h`
+
+JumpToAnywhere motion; default behavior matches beginning & ending of word, camelCase, after _ and after #: `<leader><leader><leader>j`
 
 ### normal 模式下的操作
 
@@ -214,9 +238,36 @@ redo: `Ctrl` + `r`
   - 当前文本所有内容, 但是不包含前面和后面的空格: `ie`
   - 当前文本所有内容: `ae`
 
+### 搜索
+#### 单行搜索
+光标正向移动到下一个{char}所在之处的前一个字符上: `t{char}`
+
+光标反向移动到上一个{char}所在之处的后一个字符上: `T{char}`
+
+重复上次的字符查找命令: `;`
+
+反转方向查找上次的字符查找命令: `,`
+#### 全局搜索
+
+向后查: `/{string}`, `f{2char|(char Enter)}`
+
+向前查: `?{string}`, `F{2char|(char Enter)}`
+
+重复上次的字符串查找命令: `n`
+
+反转方向查找上次的字符串查找命令: `N`
+
+查看搜索历史: `/` + `上下方向键`
+
+对光标所停留之处的单词进行严格向下查找: `*`
+
+对光标所停留之处的单词进行严格向上查找: `#`
+
 ### 特定场景的超好用组合键分享
 
-删除当前单词(光标需要先停在单词开头): `cw`
+删除当前单词: `ciw`, `diw`
+
+给下一行行尾添加分号: `A;`
 
 在当前单词结尾处添加: `ea`
 
