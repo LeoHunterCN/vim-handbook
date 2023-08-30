@@ -94,6 +94,10 @@ VSCodeVim
 
 向上滚动 5 行: `K`
 
+跳转到下一个段落: `}`
+
+跳转到上一个段落: `{`
+
 将当前行置于屏幕中央: `zz`
 
 将当前行置于屏幕顶部: `zt`
@@ -104,25 +108,40 @@ VSCodeVim
 
 跳到文件尾: `G`
 
-跳到指定行: `<number>gg`, `<number>G`(<number>指行数)  
+跳到指定行: `<number>gg`, `<number>G`(<number>指行数)
 
+单文件内标记并跳转
+  - 标记: `m{小写字母}`, 例如: `mm`
+  - 跳转: `'{小写字母}`, ``{小写字母}`
+
+多文件间标记并跳转
+  - 标记: `m{大写字母}`, 例如: `mM`
+  - 跳转: `'{大写字母}`, ``{大写字母}`
+
+跳到变量定义/使用处: `gd`
+
+向前跳转: `Ctrl` + `i`
+
+向后跳转: `Ctrl` + `o`
+
+查看跳转历史: `:jumps`
 ### 使用 vim-easymotion
 
-往下移动到单词的开头: `<leader><leader>w`
+往下移动到单词的开头: `<leader>w`
 
-往下移动到单词的结尾: `<leader><leader>e`
+往下移动到单词的结尾: `<leader>e`
 
-往上移动到单词的开头: `<leader><leader>b`
+往上移动到单词的开头: `<leader>b`
 
-往上移动到单词的结尾: `<leader><leader>ge`
+往上移动到单词的结尾: `<leader>ge`
 
-往下移动到行首: `<leader><leader>j`
+往下移动到行首: `<leader>j`
 
-往上移动到行首: `<leader><leader>k`
+往上移动到行首: `<leader>k`
 
-Matches beginning & ending of word, camelCase, after _, and after # forwards: `<leader><leader>l`
+Matches beginning & ending of word, camelCase, after _, and after # forwards: `<leader>l`
 
-Matches beginning & ending of word, camelCase, after _, and after # backwards: `<leader><leader>h`
+Matches beginning & ending of word, camelCase, after _, and after # backwards: `<leader>h`
 
 JumpToAnywhere motion; default behavior matches beginning & ending of word, camelCase, after _ and after #: `<leader><leader><leader>j`
 
@@ -238,6 +257,14 @@ redo: `Ctrl` + `r`
   - 当前文本所有内容, 但是不包含前面和后面的空格: `ie`
   - 当前文本所有内容: `ae`
 
+#### vim-surround
+Change existing surround to desired: `cs<existing><desired>`
+
+Add desired surround around text defined by: `ys<motion><desired>`
+
+Delete existing surround: `ds<existing>`
+
+Surround when in visual modes(surround full selection): `S<desired>`
 ### 搜索
 #### 单行搜索
 光标正向移动到下一个{char}所在之处的前一个字符上: `t{char}`
